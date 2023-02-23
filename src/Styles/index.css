@@ -1,0 +1,16 @@
+  .nav-bar {
+    background-color:aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+  }
+
+  ul {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
