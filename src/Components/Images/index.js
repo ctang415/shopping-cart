@@ -1,0 +1,6 @@
+export const ItemOne = require('./hanna-balan.jpg')
+export const ItemTwo = require('./jocelyn-morales.jpg')
+export const ItemThree = require('./martipaan.jpg')
+export const ItemFour = require('./svitlana.jpg')
+export const ItemFive = require('./svitlana2.jpg')
+export const ItemSix = require('./tyler-nix.jpg')

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
   .nav-bar {
     background-color:aqua;
     display: flex;
@@ -13,4 +15,38 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
+  }
+
+  .store-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10vh;
+  }
+
+  .store-items {
+    display: flex;
+    align-content: center;
+    justify-self: center;
+    flex-direction: column;
+  }
+  
+  .store-image {
+    width: 35vh;
+    max-height: 35vh;
+    object-fit: cover;
+  }
+  
+
+  .store-information {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+    padding-top: 1vh;
+    font-family: "Roboto";
   }
