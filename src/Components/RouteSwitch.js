@@ -5,6 +5,7 @@ import Home from "./Home";
 import Store from "./Store";
 import Product from "./Product";
 import Bag from "./Bag";
+import Footer from "./Footer"
 
 const RouteSwitch = () => {
   return (
@@ -15,6 +16,7 @@ const RouteSwitch = () => {
           <Route path="/store" element={<Store/>} />
           <Route path="/checkout" element={<Bag/>} />
         </Routes>
+        <Footer/>
     </BrowserRouter>
   );
 }

@@ -10,7 +10,7 @@ const Store = () => {
     {url: ItemFive, name:'Bergamot', price:'$19.99'}, {url: ItemSix, name: 'Sev', price: '$14.99'} ]
   return (
     <div className="store-page">
-      <h1>Store</h1>
+      <h1>Products</h1>
       <div className="store-images">
       {images.map((image) => {
         return (
