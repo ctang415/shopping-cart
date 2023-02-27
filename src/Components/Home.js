@@ -11,7 +11,7 @@ const Home = () => {
         <span className="background-text">Check Out Our New Candle Collection</span>
         <div><button onClick={() => navigate('/store')} className="background-button">Shop now</button></div>
       </div>
-      <img src={Background} className="background-image"></img>
+      <img src={Background} alt="Candles" className="background-image"></img>
     </div>
   );
 }

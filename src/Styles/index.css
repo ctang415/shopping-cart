@@ -3,7 +3,17 @@
   * {
     margin: 0;
     padding: 0;
-    }
+  }
+
+  .page-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    flex: 1;
+  }
 
   .nav-bar {
     background-color:rgb(134, 80, 84);
@@ -16,6 +26,7 @@
     font-size: 3vh;
     position: sticky;
     top: 0;
+    z-index: 2;
   }
 
   .nav-bar > div {
@@ -44,6 +55,11 @@
     list-style: none;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   .footer {
     background-color:rgb(134, 80, 84);
     display: flex;
@@ -53,7 +69,6 @@
     width: 100%;
     color: white;
     font-size: 3vh;
-    bottom: 0;
   }
 
   .background {
@@ -95,11 +110,6 @@
     height: 100%;
     filter: brightness(45%);
     object-fit: cover;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
   }
 
   .footer > ul {
@@ -145,8 +155,70 @@
     gap: 0.8vh;
     padding-top: 1vh;
     font-size: 2.5vh;
+    color: black;
   }
 
   .footer > ul > li {
     cursor: pointer;
+  }
+
+  .product-page {
+    padding: 8.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vh;
+  }
+
+  .product-page-image {
+    width: 25%;
+  }
+
+  .product-page-info {
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    font-size: 3.5vh;
+  }
+  
+
+  .product-page-info > span {
+    font-size: 3.5vh;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+  }
+
+  input[type=number] {
+    width: 17%;
+  }
+
+  input[type=number]:focus {
+    outline: none;
+  }
+
+  input[type=number] {
+    padding: 0.7vh;
+    width: 20%;
+  }
+
+  .product-page-quantity {
+    display: flex;
+    gap: 1vh;
+    font-size: 3.1vh;
+    align-items: center;
+  }
+
+  .product-page-quantity > button {
+    width: 10%;
+    height: 100%;
+  }
+
+  .product-page-info > button {
+    font-size: 2.5vh;
+    width: 85%;
+    padding: 1vh;
   }
