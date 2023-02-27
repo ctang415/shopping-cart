@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Store = ({products}) => {
   return (
     <div className="store-page">
@@ -14,7 +13,7 @@ const Store = ({products}) => {
               <img src={item.url} className="store-image" alt="Candle"></img>
               <div className="store-information">
                 <span>{item.name}</span>
-                <span>{item.price}</span>
+                <span>${item.price}</span>
               </div>
               </Link>
           </div>

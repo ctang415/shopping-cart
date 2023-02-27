@@ -12,9 +12,9 @@ import { useState } from "react";
 const RouteSwitch = () => {
 
   const listOfProducts = [ 
-    {url: ItemOne, name:'Forest', price:'$24.99'}, {url:ItemTwo, name:'Amber', price:'$19.99'}, 
-    {url: ItemThree, name:'Smokey Wood', price:'$29.99'}, {url: ItemFour, name:'Pine Forest', price:'$24.99'}, 
-    {url: ItemFive, name:'Bergamot', price:'$19.99'}, {url: ItemSix, name: 'Sev', price: '$14.99'} ]
+    {url: ItemOne, name:'Forest', price: 24.99}, {url:ItemTwo, name:'Amber', price: 19.99}, 
+    {url: ItemThree, name:'Smokey Wood', price: 29.99}, {url: ItemFour, name:'Pine Forest', price: 24.99}, 
+    {url: ItemFive, name:'Bergamot', price: 19.99}, {url: ItemSix, name: 'Sev', price: 14.99} ]
 
   const [ products, setProducts ] = useState(listOfProducts)
 
@@ -28,8 +28,8 @@ const RouteSwitch = () => {
         <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/store" exact element={<Store products={products}/>} />
-          <Route path="/checkout" element={<Bag/>} />
-          <Route path="/store/:id" element={<Product products={products}/>} />
+          <Route path="/checkout" element={<Bag cart={cart} />} />
+          <Route path="/store/:id" element={<Product products={products} cart={cart} setCart={setCart}/>} />
         </Routes>
         </div>
         <Footer/>

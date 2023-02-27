@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Background } from "./Images";
 
-
 const Home = () => {
   const navigate = useNavigate();
   return (

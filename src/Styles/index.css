@@ -192,10 +192,6 @@
     -webkit-appearance: none; 
   }
 
-  input[type=number] {
-    width: 17%;
-  }
-
   input[type=number]:focus {
     outline: none;
   }
@@ -203,6 +199,7 @@
   input[type=number] {
     padding: 0.7vh;
     width: 20%;
+    text-align: center;
   }
 
   .product-page-quantity {
@@ -221,4 +218,61 @@
     font-size: 2.5vh;
     width: 85%;
     padding: 1vh;
+  }
+
+  .shopping-bag {
+    font-family: "Roboto";
+    padding: 4.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shopping-bag > h1 {
+    padding-bottom: 3vh;
+  }
+
+  .shopping-bag-zero {
+    font-family: "Roboto";
+    padding: 4.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shopping-bag-empty {
+    font-size: 3vh;
+    margin-top: 12%;
+  }
+
+  .shopping-bag-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vh;
+    background-color: rgb(243, 240, 240);
+    margin-bottom: 2vh;
+    padding-left: 15vh;
+    padding-right: 15vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+  }
+
+  .shopping-bag-image {
+    width: 18vh;
+    max-height: 20vh;
+    object-fit: cover;
+  }
+
+  .shopping-bag-text {
+    font-size: 2.5vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shopping-bag-total {
+    padding-top: 4vh;
+    font-size: 3.5vh;
   }

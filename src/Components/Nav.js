@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "./Images";
 
 const Nav = ({ cart }) => {
+
   return (
     <nav className="nav-bar">
       <div><h3>The Burnt Wick</h3></div>
@@ -12,7 +13,7 @@ const Nav = ({ cart }) => {
           <Link to="/store"><li>Store</li></Link></div>
         <div className="nav-cart">
           <Link to="/checkout">
-            <div><img className="nav-cart-image" alt="Shopping cart" src={ShoppingCart}></img>( {cart.length} )</div>
+            <div><img className="nav-cart-image" alt="Shopping cart" src={ShoppingCart}></img>( {cart.reduce((a, b) => a + parseInt(b.quantity), 0)} )</div>
             </Link>
         </div>
       </ul>
