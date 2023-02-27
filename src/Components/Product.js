@@ -21,8 +21,13 @@ const Product = ({ products, cart, setCart }) => {
 
   const addToCart = (e) => {
     const inputValue = document.querySelector('input')
-    setCart(cart => [...cart, {item: myProduct, quantity: inputValue.value}])
-  }
+    if (cart.find(x => x.item.name === myProduct.name)) {
+      setCart(cart.map(item => item.item.name === myProduct.name ? {...item, quantity: item.quantity + parseInt(inputValue.value)}
+      : item))
+    } else {
+      setCart(cart => [...cart, {item: myProduct, quantity: parseInt(inputValue.value)}])
+    }
+    }
 
   return (
     <div className="product-page">

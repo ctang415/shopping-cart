@@ -8,7 +8,7 @@ const Bag = ({ cart }) => {
   useEffect(() => {
     setTotal(cart.reduce((total, item) => total + (item.quantity) * (item.item.price), 0
     ))
-  }, [])
+  }, [setTotal])
   
   if (cart.length === 0) {
   return (
