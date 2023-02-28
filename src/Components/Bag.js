@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const Bag = ({ cart, setCart }) => {
@@ -62,7 +63,9 @@ const Bag = ({ cart, setCart }) => {
         return (
           <div key={item.item.name} className="shopping-bag-items">
             <div>
+            <Link to={`.././store/${item.item.name}`}>
               <img className="shopping-bag-image" alt="Candle" src={item.item.url}></img>
+              </Link>
             </div>
             <div className="shopping-bag-text">
               <span>{item.item.name}</span>
@@ -79,7 +82,10 @@ const Bag = ({ cart, setCart }) => {
         )
       })}
       </div>
-      <span className="shopping-bag-total">Total: ${parseFloat(total).toFixed(2)} </span>
+      <div className="shopping-bag-checkout">
+        <span className="shopping-bag-total">Total: ${parseFloat(total).toFixed(2)} </span>
+        <button>Continue to Checkout</button>
+      </div>
     </div>
   )
 }

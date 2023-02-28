@@ -19,7 +19,6 @@ const Product = ({ products, cart, setCart }) => {
     }
   }
 
-
   const removeSymbols = (e) => {
     const inputValue = document.querySelector('input')
     inputValue.value = parseInt(inputValue.value.toString().replace('+', '').replace('-', ''))
@@ -46,10 +45,12 @@ const Product = ({ products, cart, setCart }) => {
         <h1>{myProduct.name}</h1>
         <span>${myProduct.price}</span>
         <div className="product-page-quantity">
-          <span>Quantity: </span> 
-          <button onClick={handleAdd}>+</button> 
+          <span>Quantity: </span>
+          <div className="product-page-buttons">
+            <button onClick={handleAdd}>+</button> 
           <input type='number' inputMode="numeric" onKeyUp={removeSymbols} defaultValue={1}></input> 
           <button onClick={handleSubtract}>-</button>
+        </div>
         </div>
         <button onClick={addToCart}>Add to Bag</button>
       </div>

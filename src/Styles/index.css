@@ -46,6 +46,10 @@
     vertical-align: middle;
   }
 
+  .nav-cart-image-div {
+    display: flex;
+  }
+
   .nav-bar > ul {
     width: 35%;
     display: flex;
@@ -295,3 +299,321 @@
     width: 10%;
     height: 100%;
   }
+
+  .shopping-bag-checkout {
+    gap: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopping-bag-checkout > button {
+    width: 90%;
+    padding: 1.5vh;
+  }
+
+  @media only screen and (min-device-width:280px) and (max-device-width: 950px) {
+
+    .nav-bar {
+        background-color:rgb(134, 80, 84);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 15vh;
+        width: 100%;
+        color: white;
+        font-size: 5.5vw;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+    .nav-bar > div {
+        font-size: 2vh;
+        margin: 1vh;
+        letter-spacing: 0.1vw;
+        background-color: rgb(52, 30, 30);
+        padding: 2vw;
+        border-radius: 1vh;
+        text-align: center;
+      }
+      
+    .nav-links {
+        display: flex;
+        gap: 5vw;
+    }
+
+    .nav-bar > ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+
+    .background-overlay {
+        font-family: "Roboto";
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        gap: 5vh;
+    }  
+
+    .background-text {
+        color: white;
+        font-size: 6vh;
+    }
+    
+    .background-image {
+        width: 100%;
+        height: 100%;
+        filter: brightness(45%);
+        object-fit: cover;
+    }
+
+    .background {
+        height: 70vh;
+        position: relative;
+        text-align: center;
+    }
+
+    .footer {
+        background-color:rgb(134, 80, 84);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 15vh;
+        width: 100%;
+        color: white;
+        font-size: 5.5vw;
+    }
+
+    .footer > ul {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        gap: 2vh;
+    }
+
+    .store-page {
+        padding: 4.5vh;
+        font-family: "Roboto";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    
+    .store-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4vh;
+    }
+    
+    .store-items {
+        display: flex;
+        align-content: center;
+        justify-self: center;
+        flex-direction: column;
+    }
+      
+    .store-image {
+        width: 10vh;
+        max-height: 10vh;
+        object-fit: cover;
+    }
+    
+    .store-information {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8vh;
+        padding-top: 1vh;
+        font-size: 2vh;
+        color: black;
+    }
+    
+    .shopping-bag-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: rgb(243, 240, 240);
+        margin-bottom: 2vh;
+        padding-left: 8vh;
+        padding-right: 8vh;
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+    }
+    
+    .product-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5vh;
+    }
+
+    .product-page-info > h1 {
+        font-size: 3.5vh;
+    }
+    
+    .product-page-image {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .product-page-info {
+        font-family: "Roboto";
+        display: flex;
+        flex-direction: column;
+        gap: 3.5vh;
+        font-size: 2.5vh;
+    }
+      
+    .product-page-info > span {
+        font-size: 2.2vh;
+    }
+
+    .product-page-quantity > span {
+        font-size: 2.2vh;
+    }
+
+    .product-page-quantity {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+        font-size: 2vh;
+        align-items: flex-start;
+    }
+
+    .product-page-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-page-buttons > button {
+        width: 100%;
+    }
+    
+    .product-page-quantity > button {
+        width: 20%;
+    }
+    
+    .product-page-info > button {
+        font-size: 1.6vh;
+        width: 100%;
+        padding: 0.5vh;
+    }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+  }
+
+  input[type=number]:focus {
+    outline: none;
+  }
+
+  input[type=number] {
+    padding: 0.5vh;
+    width: 50%;
+    text-align: center;
+  }
+
+  .shopping-bag {
+    font-family: "Roboto";
+    padding: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shopping-bag > h1 {
+    padding-bottom: 3vh;
+  }
+
+  .shopping-bag-zero {
+    font-family: "Roboto";
+    padding: 4.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shopping-bag-empty {
+    font-size: 3vh;
+    margin-top: 12%;
+  }
+
+  .shopping-bag-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(243, 240, 240);
+    margin-bottom: 2vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  .shopping-bag-image {
+    width: 15vh;
+    max-height: 20vh;
+    object-fit: cover;
+    margin-left: 2vh;
+  }
+
+  .shopping-bag-text {
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+
+  .shopping-bag-total {
+    padding-top: 4vh;
+    font-size: 3.5vh;
+  }
+
+  .shopping-bag-quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vh;
+  }
+
+  .shopping-bag-quantity > input {
+    width: 20%;
+    padding: 0;
+    height: 85%;
+  }
+
+  .shopping-bag-quantity > button {
+    width: 10%;
+    height: 100%;
+  }
+
+  .shopping-bag-checkout {
+    gap: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopping-bag-checkout > button {
+    width: 60%;
+    padding: 0.5vh;
+  }
+
+}
