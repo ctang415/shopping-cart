@@ -19,8 +19,18 @@ const Product = ({ products, cart, setCart }) => {
     }
   }
 
+
+  const removeSymbols = (e) => {
+    const inputValue = document.querySelector('input')
+    inputValue.value = parseInt(inputValue.value.toString().replace('+', '').replace('-', ''))
+  }
+
   const addToCart = (e) => {
     const inputValue = document.querySelector('input')
+    if (inputValue.value < 0 || inputValue.value === '') {
+      inputValue.value = 0
+      e.preventDefault()
+    }
     if (cart.find(x => x.item.name === myProduct.name)) {
       setCart(cart.map(item => item.item.name === myProduct.name ? {...item, quantity: item.quantity + parseInt(inputValue.value)}
       : item))
@@ -38,7 +48,7 @@ const Product = ({ products, cart, setCart }) => {
         <div className="product-page-quantity">
           <span>Quantity: </span> 
           <button onClick={handleAdd}>+</button> 
-          <input type='number' defaultValue={1}></input> 
+          <input type='number' inputMode="numeric" onKeyUp={removeSymbols} defaultValue={1}></input> 
           <button onClick={handleSubtract}>-</button>
         </div>
         <button onClick={addToCart}>Add to Bag</button>

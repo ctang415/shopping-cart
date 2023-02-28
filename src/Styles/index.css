@@ -251,11 +251,10 @@
   .shopping-bag-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5vh;
     background-color: rgb(243, 240, 240);
     margin-bottom: 2vh;
-    padding-left: 15vh;
-    padding-right: 15vh;
+    padding-left: 8vh;
+    padding-right: 8vh;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
   }
@@ -264,15 +263,35 @@
     width: 18vh;
     max-height: 20vh;
     object-fit: cover;
+    margin-left: 5vh;
   }
 
   .shopping-bag-text {
     font-size: 2.5vh;
     display: flex;
     flex-direction: column;
+    gap: 2.5vh;
   }
 
   .shopping-bag-total {
     padding-top: 4vh;
     font-size: 3.5vh;
+  }
+
+  .shopping-bag-quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vh;
+  }
+
+  .shopping-bag-quantity > input {
+    width: 20%;
+    padding: 0;
+    height: 85%;
+  }
+
+  .shopping-bag-quantity > button {
+    width: 10%;
+    height: 100%;
   }
