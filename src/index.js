@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import RouteSwitch from './Components/RouteSwitch';
+import { BrowserRouter } from 'react-router-dom';
+import App from './Components/App';
 import './Styles/index.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <RouteSwitch />
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
 );
 
 

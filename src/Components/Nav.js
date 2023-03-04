@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "./Images";
 
 const Nav = ({ cart }) => {
-
   return (
     <nav className="nav-bar">
       <div className="nav-bar-header">

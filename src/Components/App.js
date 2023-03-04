@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
 import Store from "./Store";
@@ -9,19 +9,24 @@ import Footer from "./Footer"
 import { ItemOne, ItemTwo, ItemThree, ItemFour, ItemFive, ItemSix } from "./Images";
 import { useState } from "react";
 
-const RouteSwitch = () => {
+const App = () => {
 
   const listOfProducts = [ 
     {url: ItemOne, name:'Forest', price: 24.99}, {url:ItemTwo, name:'Amber', price: 19.99}, 
     {url: ItemThree, name:'Smokey Wood', price: 29.99}, {url: ItemFour, name:'Pine Forest', price: 24.99}, 
     {url: ItemFive, name:'Bergamot', price: 19.99}, {url: ItemSix, name: 'Sev', price: 14.99} ]
 
-  const [ products, setProducts ] = useState(listOfProducts)
+  const [ products, setProducts ] = useState([])
 
   const [ cart, setCart ] = useState([])
 
+  useEffect(() => {
+    setProducts(listOfProducts)
+
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
-    <BrowserRouter>
     <div className="page-container">
           <div className="content-wrapper">
       <Nav cart={cart}/>
@@ -34,8 +39,7 @@ const RouteSwitch = () => {
         </div>
         <Footer/>
         </div>
-    </BrowserRouter>
   );
 }
 
-export default RouteSwitch;
+export default App;
