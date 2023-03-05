@@ -34,7 +34,7 @@ const App = () => {
       <div className="content-wrapper">
       <Nav cart={cart}/>
         <Routes>
-          <Route path="/home" element={<Home clickHandler={clickHandler}/>} />
+          <Route path="/shopping-cart" element={<Home clickHandler={clickHandler}/>} />
           <Route path="/store" exact element={<Store products={products}/>} />
           <Route path="/checkout" element={<Bag cart={cart} setCart={setCart} />} />
           <Route path="/store/:id" element={<Product products={products} cart={cart} setCart={setCart}/>} />
