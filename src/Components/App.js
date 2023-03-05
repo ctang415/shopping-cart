@@ -12,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const navigate = useNavigate();
-  
   const clickHandler = (e) => {
     navigate('/store')
   }
@@ -28,8 +27,6 @@ const App = () => {
 
   useEffect(() => {
     setProducts(listOfProducts)
-
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

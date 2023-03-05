@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const Product = ({ products, cart, setCart }) => {
-
   const  matchId  = useParams()
 
   const myProduct = products.find(item => item.name === matchId.id) 

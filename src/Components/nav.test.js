@@ -2,34 +2,32 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/'
 import { act } from 'react-dom/test-utils';
-import { MemoryRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Nav from './Nav';
 
 describe('Nav component', () => {
 
   let cart = []
   it('renders header logo', () => {
-    const { getByRole } = render(<MemoryRouter initialEntries={['/']}><Nav cart={cart}/></MemoryRouter>)
+    const { getByRole } = render(<Nav cart={cart}/>, {wrapper: BrowserRouter})
     expect(getByRole('heading', /The Burnt Wick/i)).toBeInTheDocument()
   })
     
   it('nav links are displayed', () => {
       let cart = []
-      const { getByText } = render(<MemoryRouter initialEntries={['/']}><Nav cart={cart}/></MemoryRouter>)
+      const { getByText } = render(<Nav cart={cart}/>, {wrapper: BrowserRouter})
       expect(getByText(/home/i)).toBeInTheDocument()
       expect(getByText(/store/i)).toBeInTheDocument()
   })
 
   it('nav cart is empty', () => {
-      const { getByText } = render(<MemoryRouter initialEntries={['/']}><Nav cart={cart}/></MemoryRouter>)
+      const { getByText } = render(<Nav cart={cart}/>, {wrapper: BrowserRouter})
       expect(getByText(/0/i)).toBeInTheDocument()
   })
 
   it('navigates to store page on click', async () => {
       render(
-        <MemoryRouter>
-          <Nav cart={cart}/>
-        </MemoryRouter>
+          <Nav cart={cart}/>, {wrapper: BrowserRouter}
       )
       await act ( async () => { userEvent.click(screen.getByText(/store/i))
       })
@@ -38,9 +36,7 @@ describe('Nav component', () => {
   
   it('navigates to home page on click', async () => {
       render(
-        <MemoryRouter>
-          <Nav cart={cart}/>
-        </MemoryRouter>
+          <Nav cart={cart}/>, {wrapper: BrowserRouter}
       )
       await act ( async () => { userEvent.click(screen.getByText(/home/i))
       })
@@ -49,9 +45,7 @@ describe('Nav component', () => {
   
   it('navigates to shopping bag on click', async () => {
       render(
-        <MemoryRouter>
-          <Nav cart={cart}/>
-        </MemoryRouter>
+          <Nav cart={cart}/>, {wrapper: BrowserRouter}
       )
       await act ( async () => { userEvent.click(screen.getByAltText(/shopping cart/i))
       })
