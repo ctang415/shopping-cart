@@ -58,7 +58,6 @@ const Bag = ({ cart, setCart }) => {
   } return (
     <div className="shopping-bag">
       <h1>Check Out</h1>
-      <div>
       {cart.map(item => {
         return (
           <div key={item.item.name} className="shopping-bag-items">
@@ -73,7 +72,7 @@ const Bag = ({ cart, setCart }) => {
               <div id={item.item.name} className="shopping-bag-quantity">
                 <span>Quantity: </span>
                 <button onClick={increaseCart}>+</button>
-                <input name={item.item.name} type="number" inputMode="numeric" onKeyUp={removeSymbols} onBlur={handleBlur} defaultValue={item.quantity}></input>
+                <input name={item.item.name} type="number" aria-label="inputBox" inputMode="numeric" onKeyUp={removeSymbols} onBlur={handleBlur} defaultValue={item.quantity}></input>
                 <button onClick={decreaseCart}>-</button>
                 <button onClick={removeFromCart}>X</button>
               </div>
@@ -81,7 +80,6 @@ const Bag = ({ cart, setCart }) => {
           </div>
         )
       })}
-      </div>
       <div className="shopping-bag-checkout">
         <span className="shopping-bag-total">Total: ${parseFloat(total).toFixed(2)} </span>
         <button>Continue to Checkout</button>
