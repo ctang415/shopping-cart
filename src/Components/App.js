@@ -17,7 +17,7 @@ const App = () => {
       <div className="content-wrapper">
       <Nav cart={cart}/>
         <Routes>
-          <Route path="/shopping-cart" exact element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/store" exact element={<Store/>} />
           <Route path="/checkout" element={<Bag cart={cart} setCart={setCart} />} />
           <Route path="/store/:id" element={<Product cart={cart} setCart={setCart}/>} />
