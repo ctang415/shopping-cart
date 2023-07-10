@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.d7cb83ae.css",
-    "main.js": "/shopping-cart/static/js/main.14bf2b23.js",
+    "main.js": "/shopping-cart/static/js/main.60116e51.js",
     "static/media/pratikasha-mohanty.jpg": "/shopping-cart/static/media/pratikasha-mohanty.f8952ad79037e40485a6.jpg",
     "static/media/martipaan.jpg": "/shopping-cart/static/media/martipaan.b0e44d5fb6ba57776be8.jpg",
     "static/media/svitlana.jpg": "/shopping-cart/static/media/svitlana.ee1123e925a36da93dbe.jpg",
@@ -11,10 +11,10 @@
     "static/media/tyler-nix.jpg": "/shopping-cart/static/media/tyler-nix.81327e874399d2597d05.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.d7cb83ae.css.map": "/shopping-cart/static/css/main.d7cb83ae.css.map",
-    "main.14bf2b23.js.map": "/shopping-cart/static/js/main.14bf2b23.js.map"
+    "main.60116e51.js.map": "/shopping-cart/static/js/main.60116e51.js.map"
   },
   "entrypoints": [
     "static/css/main.d7cb83ae.css",
-    "static/js/main.14bf2b23.js"
+    "static/js/main.60116e51.js"
   ]
 }
