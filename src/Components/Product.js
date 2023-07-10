@@ -1,10 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Error from "./Error";
 
 const Product = ({ cart, setCart, products }) => {
   const matchId  = useParams()
+  const location = useLocation()
   const [ product, setProduct ] = useState([])
   const [ isTrue, setIsTrue ] = useState(false)
 
@@ -15,7 +16,7 @@ const Product = ({ cart, setCart, products }) => {
       setProduct([products.find(item => item.name === matchId.id)])
       setIsTrue(false)
     }
-  }, [isTrue])
+  }, [isTrue, location.pathname])
 
   const handleAdd = (e) => {
     const inputValue = document.querySelector('input')
@@ -36,19 +37,24 @@ const Product = ({ cart, setCart, products }) => {
 
   const addToCart = (e) => {
     const inputValue = document.querySelector('input')
-    if (product.name !== undefined) {
       if (inputValue.value < 0 || inputValue.value === '') {
       inputValue.value = 0
       e.preventDefault()
-      } else if (cart.find(x => x.item.name === product.name)) {
-        console.log(cart.find(x => x.item.name === product.name))
-      setCart(cart.map(item => item.item.name === product.name ? {...item, quantity: item.quantity + parseInt(inputValue.value)}
+      } else if (cart.find(x => x.item.name === product[0].name)) {
+        console.log(cart.find(x => x.item.name === product[0].name))
+        console.log(product[0].name)
+      setCart(cart.map(item => item.item.name === product[0].name ? {...item, quantity: item.quantity + parseInt(inputValue.value)}
       : item))
     } else {
-      setCart(cart => [...cart, {item: product, quantity: parseInt(inputValue.value)}])
+      setCart(cart => [...cart, {item: product[0], quantity: parseInt(inputValue.value)}])
+      console.log('new')
     }
-  }
 }
+
+useEffect(() => {
+  console.log(cart)
+}, [])
+
   if (!isTrue) {
   return (
     product.map(myProduct => {
