@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
 const Bag = ({ cart, setCart }) => {
 
-  const [ total, setTotal] = useState(0)
+  const [total, setTotal] = useState(0)
 
   const removeFromCart = (e) => {
     setCart(cart.filter(item => item.item.name !== e.target.parentNode.id ))
@@ -44,6 +43,8 @@ const Bag = ({ cart, setCart }) => {
   useEffect(() => {
     setTotal(cart.reduce((total, item) => total + (item.quantity) * (item.item.price), 0
     ))
+    console.log(cart)
+    console.log(total)
   }, [cart])
 
   if (cart.length === 0) {
@@ -55,7 +56,8 @@ const Bag = ({ cart, setCart }) => {
       </div>
     </div>
   );
-  } return (
+  } else {
+  return (
     <div className="shopping-bag">
       <h1>Check Out</h1>
       {cart.map(item => {
@@ -86,6 +88,7 @@ const Bag = ({ cart, setCart }) => {
       </div>
     </div>
   )
+    }
 }
 
 export default Bag;
